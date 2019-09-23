@@ -1,9 +1,0 @@
-{
-  "pages": [
-    "pages/index/index"
-  ],
-  "window": {
-    "defaultTitle": "Alipay MiniApp",
-    "titleBarColor": "#323239"
-  }
-}
