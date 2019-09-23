@@ -1,8 +1,7 @@
 import React from 'react';
-import { View } from 'remax/alipay';
 import styles from './index.module.css';
 
-import { Layout } from '../../components';
+import { Layout, View } from '../../components';
 
 const list = [];
 
