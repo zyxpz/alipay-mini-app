@@ -2679,6 +2679,11 @@ mime@^2.3.1, mime@^2.4.4:
   resolved "https://registry.npm.taobao.org/mime/download/mime-2.4.4.tgz#bd7b91135fc6b01cde3e9bae33d659b63d8857e5"
   integrity sha1-vXuRE1/GsBzePpuuM9ZZtj2IV+U=
 
+mini-antui@^0.4.34:
+  version "0.4.34"
+  resolved "https://registry.npm.taobao.org/mini-antui/download/mini-antui-0.4.34.tgz#3d306867382d2eb04a4b21a53ca955077786d721"
+  integrity sha1-PTBoZzgtLrBKSyGlPKlVB3eG1yE=
+
 mini-types@^0.0.4:
   version "0.0.4"
   resolved "https://registry.npm.taobao.org/mini-types/download/mini-types-0.0.4.tgz#016f5a7553289c9b17a26e39480372b571f0683f"
