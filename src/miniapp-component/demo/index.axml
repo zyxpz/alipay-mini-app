@@ -1,0 +1,3 @@
+<view class="mido-wrap">
+  <text class="mido-content" a:if="{{show}}"><slot /></text>
+</view>

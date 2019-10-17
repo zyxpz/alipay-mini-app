@@ -5,3 +5,5 @@ export { default as View } from './View';
 export { default as Popup } from './Popup';
 
 export { default as Modal } from './Modal';
+
+export { default as Demo } from './Demo';

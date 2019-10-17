@@ -9,7 +9,7 @@ export default props => {
     children,
     ...other
   }= props;
-  console.log(other)
+
   return (
     <Modal {...other}>
       <View slot="header">{title}</View>

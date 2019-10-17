@@ -1,0 +1,8 @@
+.mido-wrap {
+  width: 200px;
+  height: 200px;
+}
+
+.mido-content {
+  color: red;
+}

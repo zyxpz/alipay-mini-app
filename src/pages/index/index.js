@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './index.module.css';
 import { Button } from 'remax/alipay';
-import { Layout, View, Popup, Modal } from '../../components';
+import { Layout, View, Popup, Modal, Demo } from '../../components';
 
 const list = [];
 
@@ -14,6 +14,7 @@ export default () => {
 
   const [modalShow, modalFn] = useState(false);
 
+  const [demoShow, demoFn] = useState(false)
 
   return (
     <View className={styles.app}>
@@ -32,6 +33,12 @@ export default () => {
             }}
             type="primary"
           >Modal</Button>
+          <Button
+            onClick={() => {
+              demoFn(true)
+            }}
+            type="primary"
+          >mido Demo</Button>
           <Popup
             show={show}
             onClose={() => {
@@ -59,6 +66,14 @@ export default () => {
               hellow Modal
             </View>
           </Modal>
+          <Demo
+            show={demoShow}
+            onClose={() => {
+              demoFn(false)
+            }}
+            content="hello mido demo"
+          >
+          </Demo>
         </Layout.Content>
         <Layout.Footer style={{ backgroundColor: 'green' }} />
       </Layout>
