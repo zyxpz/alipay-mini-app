@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import styles from './index.module.css';
-import { Button } from 'remax/alipay';
-import { Layout, View, Popup, Modal, Demo } from '../../components';
+import { Button, ScrollView, View } from 'remax/alipay';
+import { Layout, Popup, Modal, Demo } from '../../components';
+
+import { setSpm } from '@/util';
+
+
 
 const list = [];
 
@@ -16,66 +20,37 @@ export default () => {
 
   const [demoShow, demoFn] = useState(false)
 
+  const [messageList, listFn] = useState([]);
+
+  const spmD = setSpm({ id: 'pa.send.spmC' })
   return (
     <View className={styles.app}>
       <Layout>
         <Layout.Header className="basic-header" />
         <Layout.Content style={{ backgroundColor: 'yellow' }}>
-          <Button
-            onClick={() => {
-              showFn(true)
-            }}
-            type="primary"
-          >popup</Button>
-          <Button
-            onClick={() => {
-              modalFn(true)
-            }}
-            type="primary"
-          >Modal</Button>
-          <Button
-            onClick={() => {
-              demoFn(true)
-            }}
-            type="primary"
-          >mido Demo</Button>
-          <Popup
-            show={show}
-            onClose={() => {
-              showFn(false)
-            }}
-          >
-            <View className={styles.box}
-              style={{
-                height: '200px',
-                backgroundColor: '#fff',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}
-            >
-              hellow world
+          <View data-spmC='111' {...spmD}>
+            {
+              list.map((item, i) => {
+                console.log(setSpm({
+                  id: 'pa.send.spmD',
+                  other: {
+                    name: i
+                  }
+                }))
+                return <View {
+                  ...setSpm({
+                    id: 'pa.send.spmD',
+                    other: {
+                      name: i
+                    }
+                  })
+                } key={i}>{item}</View>
+              })
+            }
           </View>
-          </Popup>
-          <Modal
-            show={modalShow}
-            title="title"
-            btnText="确定"
-          >
-            <View>
-              hellow Modal
-            </View>
-          </Modal>
-          <Demo
-            show={demoShow}
-            onClose={() => {
-              demoFn(false)
-            }}
-            content="hello mido demo"
-          >
-          </Demo>
         </Layout.Content>
-        <Layout.Footer style={{ backgroundColor: 'green' }} />
+        <Layout.Footer style={{ backgroundColor: 'green' }}>
+        </Layout.Footer>
       </Layout>
     </View>
   )
